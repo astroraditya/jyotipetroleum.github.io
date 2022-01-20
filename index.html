@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Jyot Petroleum</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!--<meta property="og:url" content="https://astroraditya.github.io/timeline" >-->
+    <meta property="og:url" content="https://jyotipetroleum.github.io/" >
     <meta property="og:title" content="Jyotiraditya Sikder" >
     <meta name=”author” content= "M/S Jyoti Petroleum" >
     <meta property="og:description" content="The official Datasite of the company" >
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./style.css">
 
     <!--Java Script Linker-->
-    <script src="pass.js"></script>  
+    <script src="img/pass.js"></script>  
 
 </head>
 
@@ -204,7 +204,7 @@
           <td><input type="text" name="Total Sell"  v-model="item.ttls" /></td>
           <td><input type="text" name="Total Asset"  v-model="item.ttla" /></td>
           
-          <td>Rs.{{ item.ttls -item.ttla | currency}}</td>
+          <td>Rs.{{ item.ttla -item.ttls | currency}}</td>
         </tr>
     
         <!--Card Details ends-->

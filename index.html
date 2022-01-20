@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+    <meta charset="utf-8">
+    <title>Jyot Petroleum</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!--<meta property="og:url" content="https://astroraditya.github.io/timeline" >-->
+    <meta property="og:title" content="Jyotiraditya Sikder" >
+    <meta name=”author” content= "M/S Jyoti Petroleum" >
+    <meta property="og:description" content="The official Datasite of the company" >
+    <meta property="og:image" content="https://sites.google.com/site/jyotipetroleumandagroservice/_/rsrc/1495649538910/home/13244817_132599667145290_2129754471675555111_n.jpg" >
+    
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./style.css">
+
+    <!--Java Script Linker-->
+    <script src="pass.js"></script>  
+
+</head>
+
+<body>
+
+    <!-- partial:index.partial.html -->
+    
+    <div class="invoice-box">
+    
+      <form name = "form1" action="modified.php" method = "post" enctype = "multipart/form-data" > 
+    
+      <table cellpadding="0" cellspacing="0">
+        <tr class="top">
+          <td colspan="6">
+            <table>
+              <tr>
+                <td class="title">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Indian_Oil_Logo.svg/1713px-Indian_Oil_Logo.svg.png" 
+                  style="width:15%; max-width:300px;">
+                </td>
+    
+                <td>
+                  M/S Jyoti Petroleum & Agro Service<br> Jyotirmoy Sikder<br>+91 94772 38656 <br>jyotipetroleum.data@gmail.com
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+    
+        <tr class="top">
+          <td colspan="4">
+           <h1>DATA SET</h1>
+          </td>
+        </tr>
+    
+        <!--
+        <tr class="heading">
+          <td colspan="3">Payment Method</td>
+          <td>Check #</td>
+        </tr>
+    
+        
+        <tr class="details">
+          <td colspan="3">Check</td>
+          <td>1000</td>
+        </tr> 
+    
+        -->
+    
+    
+        <!--MSD Details starts-->
+    
+        <tr class="heading">
+          <td>MS 1</td>
+          <td>MS 2</td>
+          <td>MS 3</td>
+          <td>Testing</td>
+          <td>Rate(Rs.)</td>
+          <td>Amount MS</td>
+        </tr>
+    
+        <tr class="item" v-for="item in items">
+          <td><input type="text"  v-model="item.ms1b" /></td>
+          <td><input type="text" name='Name' v-model="item.ms2b" /></td>
+          <td><input type="text" v-model="item.ms3b" /></td>
+        </tr>
+    
+        <tr class="item" v-for="item in items">
+          <td><input type="text" name="MS 1" v-model="item.ms1" /></td>
+          <td><input type="text" name="MS 2" v-model="item.ms2" /></td>
+          <td><input type="text" name="MS 3" v-model="item.ms3" /></td>
+          <td><input type="text" name="MS Testing" v-model="item.tems" /></td>
+          <td><input type="text" name="MS Rate" v-model="item.rms" /></td>
+    
+          <td>Rs.{{ ((item.ms1 - item.ms1b) - - (item.ms2 - item.ms2b) - - (item.ms3 - item.ms3b) - item.tems) * item.rms | currency }}</td>
+        </tr>
+    
+    
+        <!--MSD Details ends-->
+    
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+    
+        <!--HSD Details starts-->
+    
+        <tr class="heading">
+          <td>HS 1</td>
+          <td>HS 2</td>
+          <td>HS 3</td>
+          <td>Testing</td>
+          <td>Rate (Rs.)</td>
+          <td>Amount HS</td>
+        </tr>
+    
+        <tr class="item" v-for="item in items">
+          <td><input type="text" v-model="item.hs1b" /></td>
+          <td><input type="text" name='Name' v-model="item.hs2b" /></td>
+          <td><input type="text" v-model="item.hs3b" /></td>
+        </tr>
+    
+        <tr class="item" v-for="item in items">
+          <td><input type="text" name="HS 1" v-model="item.hs1" /></td>
+          <td><input type="text" name="HS 2" v-model="item.hs2" /></td>
+          <td><input type="text" name="HS 3" v-model="item.hs3" /></td>
+          <td><input type="text" name="HS Testing" v-model="item.tehs" /></td>
+          <td><input type="text" name="HS Rate" v-model="item.rhs" /></td>
+          
+          <td>Rs.{{ ((item.hs1 - item.hs1b) - - (item.hs2 - item.hs2b) - - (item.hs3 - item.hs3b) - item.tehs) * item.rhs | currency }}</td>
+        </tr>
+    
+    
+        <!--HSD Details ends-->
+    
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+    
+        <!--Cash Details starts-->
+    
+        <tr class="heading">
+          <td>CASH</td>
+          <td>Cheque</td>
+          <td>NEFT</td>
+          <td>PayTM</td>
+          <td>PhonePAY</td>
+          <td>HDFC QBar</td>
+        </tr>
+    
+        <tr class="item" v-for="item in items">
+          <td><input type="text" name="Cash" v-model="item.cash" /></td>
+          <td><input type="text" name="Cheque" v-model="item.cheque" /></td>
+          <td><input type="text" name="NEFT" v-model="item.neft" /></td>
+          <td><input type="text" name="PayTM" v-model="item.paytm" /></td>
+          <td><input type="text" name="PhonePAY" v-model="item.phonepay" /></td>
+          <td><input type="text" name="HDFC QBar" v-model="item.hdf" /></td>
+        </tr>
+    
+        <!--Cash Details ends-->
+    
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+    
+        <!--Card Details starts-->
+    
+        <tr class="heading">
+          <td>HDFC</td>
+          <td>SBI Card</td>
+          <td>SBI Direct</td>
+          <td>IOC ccms</td>
+          <td>Others</td>
+          <td>Total Asset</td>
+        </tr>
+    
+        <tr class="item" v-for="item in items">
+          <td><input type="text" name="HDFC" v-model="item.hdfc" /></td>
+          <td><input type="text" name="SBI Card" v-model="item.sbic" /></td>
+          <td><input type="text" name="SBI Direct"  v-model="item.sbi" /></td>
+          <td><input type="text" name="IOC ccms" v-model="item.ioc" /></td>
+          <td><input type="text" name="Others"  v-model="item.oth" /></td>
+          <td>Rs.{{ item.hdfc - - item.sbic - - item.sbi - - item.ioc - - item.oth - - item.cash - - item.cheque - - item.hdf - - item.neft - - item.paytm - - item.phonepay| currency}}</td>
+        </tr>
+    
+        <!--Card Details ends-->
+    
+        <tr><td></td></tr>
+        <tr><td><h3><b>FINAL DATA</b></h3></td></tr>
+    
+        <!--Card Details starts-->
+    
+        <tr class="heading">
+          <td>Amount MS</td>
+          <td>Amount HS</td>
+          <td>Total Sell</td>
+          <td>Total Sell</td>
+          <td>Total Asset</td>
+          <td>Difference</td>
+        </tr>
+    
+        <tr class="item" v-for="item in items">
+          <td><input type="text" name="Amount MS" v-model="item.amms" /></td>
+          <td><input type="text" name="Amount HS" v-model="item.amhs" /></td>
+          <td>Rs.{{ (item.amms - - item.amhs)| currency}}</td>
+          <td><input type="text" name="Total Sell"  v-model="item.ttls" /></td>
+          <td><input type="text" name="Total Asset"  v-model="item.ttla" /></td>
+          
+          <td>Rs.{{ item.ttls -item.ttla | currency}}</td>
+        </tr>
+    
+        <!--Card Details ends-->
+    
+    
+    
+    <!--
+        <tr class="heading">
+          <td>Item</td>
+          <td>Unit Cost</td>
+          <td>Quantity</td>
+          <td>Price</td>
+        </tr>
+    
+       
+        <tr class="item" v-for="item in items">
+          <td><input v-model="item.description" /></td>
+          <td>$<input type="number" name='Name' v-model="item.price" /></td>
+          <td><input type="number" v-model="item.quantity" /></td>
+          <td>${{ item.price * item.quantity | currency }}</td>
+        </tr>
+    
+        <tr>
+          <td colspan="4">
+            <button class="btn-add-row" @click="addRow">Add row</button>
+          </td>
+        </tr> 
+                      -->
+    
+      <tr><td></td></tr>
+        <tr><td></td></tr>
+    
+        <tr> 
+          <td colspan="3">
+          <input type="submit" name="submit" value="Submit"/> </td>
+        </tr>
+    
+       
+      </table>
+    
+    </form>
+    </div>
+    
+    <!-- partial -->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script><script  src="./script.js"></script>
+    
+    <!--Java Script Linker-->
+    <script src="data.js"></script>
+    
+    </body>
+    </html>
